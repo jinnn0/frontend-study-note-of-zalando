@@ -6,7 +6,12 @@ The purpose of this project is to study Frontend development of Zalando web appl
 - Identify frontend techniques may have been used
 - Explore new ideas for delivering straigtforward user experience
 
+
+
+## Screenshot
+![screenshot 1](screenshots/screenshot-1.png)
+
 ## Reference
 
-[Official Zalando](https://www.zalando.ie/women-home/)
-[Zalando design](https://medium.com/zalando-design)
+Official Zalandp website [Official Zalando](https://www.zalando.ie/women-home/) <br/>
+Zalando Design [Zalando design](https://medium.com/zalando-design)
