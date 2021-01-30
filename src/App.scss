@@ -1,0 +1,258 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: HelveticaNow, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  border: 1px solid transparent;
+}
+
+/**
+* Emable layout button
+* To easily identify the layout of the UI
+*/
+.enable-layout-btn {
+  margin-left: 18px;
+  margin-right: 18px;
+  margin-bottom: 24px;
+  padding: 10px 10px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #fff;
+  box-shadow: inset 0 0 0 1px #1a1a1a;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: inset 0 0 0 2px #1a1a1a;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-left: calc((100vw - 1216px) / 2);
+    margin-right: calc((100vw - 1216px) / 2);
+  }
+}
+
+/* Show border of each element for layout study */
+.show-layout {
+  *,
+  *::before,
+  *::after {
+    border: 1px solid #1a1a1a;
+  }
+}
+
+.show-layout.recommendation .carousel li:last-child::after {
+  border: 5px solid #1a1a1a;
+}
+
+/* Recommendation */
+.recommendation {
+  min-width: 300px;
+  margin: 64px 0;
+  background-color: white;
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+      padding-left: 24px;
+      padding-right: 24px;
+      flex-direction: row;
+    }
+
+    @media screen and (min-width: 1280px) {
+      padding-left: calc((100vw - 1216px) / 2);
+      padding-right: calc((100vw - 1216px) / 2);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      letter-spacing: -0.24px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      flex: 1;
+      padding: 0 8px;
+
+      @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+      }
+
+      @media screen and (min-width: 1024px) {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 2.25rem;
+        letter-spacing: -0.32px;
+      }
+    }
+
+    p:nth-child(2) {
+      font-family: Tiempos, Times New Roman, serif;
+      -webkit-font-smoothing: antialiased;
+      font-weight: 400;
+      margin-top: 5px;
+
+      @media screen and (min-width: 1024px) {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: -0.16px;
+      }
+    }
+
+    .see-more {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.5rem;
+      letter-spacing: -0.16px;
+      color: #6328e0;
+      text-decoration: none;
+      padding: 0 8px;
+      margin-top: 16px;
+      cursor: pointer;
+
+      @media screen and (min-width: 768px) {
+        align-self: flex-end;
+        margin-top: 0;
+      }
+    }
+  }
+
+  /* Carousel */
+  .carousel {
+    scroll-padding-left: 18px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin: 0;
+    display: flex;
+    transform: translateZ(0);
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: scroll;
+    list-style: none;
+
+    &::-webkit-scrollbar {
+      display: none; /* make scroll bar transparent */
+    }
+    scrollbar-width: none; /* fix for firefox */
+
+    @media screen and (min-width: 768px) {
+      scroll-padding-left: 24px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      scroll-padding-left: calc((100vw - 1216px) / 2);
+      padding-left: calc((100vw - 1216px) / 2);
+      padding-right: calc((100vw - 1216px) / 2);
+    }
+
+    li {
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      flex-basis: 50%;
+      max-width: 50%;
+      padding-left: 6px;
+      padding-right: 6px;
+
+      @media screen and (min-width: 768px) {
+        max-width: 25%;
+        flex-basis: 25%;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+
+      a {
+        color: #1a1a1a;
+        text-decoration: none;
+      }
+
+      /* Image */
+      .image-wrapper {
+        position: relative;
+        height: 0;
+        padding-top: 144.357%;
+        margin-bottom: 10px;
+
+        img {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: opacity 0.25s ease-in-out;
+        }
+      }
+
+      /* Description */
+      .item-description {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        span {
+          font-family: Tiempos, Times New Roman, serif;
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .price {
+          margin-top: 15px;
+        }
+      }
+
+      /**
+      * Creating padding to the right
+      * Refer to the right padding issue on scrolling (overflow) element
+      * https://web.archive.org/web/20170707053030/http://www.brunildo.org/test/overscrollback.html
+      */
+
+      &:last-child {
+        position: relative;
+      }
+
+      &:last-child::after {
+        content: '';
+        display: block;
+        width: 24px;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        border: 1px solid transparent;
+
+        @media screen and (min-width: 768px) {
+          width: 32px;
+        }
+        @media screen and (min-width: 1280px) {
+          width: calc((100vw - 1216px) / 2);
+        }
+      }
+    }
+  }
+}
