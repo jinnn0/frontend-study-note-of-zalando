@@ -8,10 +8,11 @@ The purpose of this project is to study Frontend development of Zalando web appl
 
 
 
-## Screenshot
+## Screensots 
+### Recommendation 
 ![screenshot 1](screenshots/screenshot-1.png)
 
 ## Reference
 
-Official Zalandp website [Official Zalando](https://www.zalando.ie/women-home/) <br/>
+Official Zalando website [Official Zalando](https://www.zalando.ie/women-home/) <br/>
 Zalando Design [Zalando design](https://medium.com/zalando-design)
