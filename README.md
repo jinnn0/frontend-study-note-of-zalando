@@ -1,6 +1,6 @@
 The purpose of this project is to study Frontend development of Zalando web application.
 
-#### Core areas of study
+## Core areas of study
 
 - Identify the design patterns
 - Identify frontend techniques may have been used
